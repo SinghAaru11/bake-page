@@ -65,9 +65,17 @@
      */
 }
 
-.lft-sec{
-    margin-top: 165px;
+.lft-sec {
+    margin-top: 165px; /* Default margin-top */
 }
+
+/* Media Query for Small Screens */
+@media (max-width: 768px) {
+    .lft-sec {
+        margin-top: 231px; /* Adjusted margin-top for small screens */
+    }
+}
+
 
 
 element.style {
