@@ -1,21 +1,55 @@
 .top-header {
 
-    /* position: fixed; */
-    /* bottom: 40px; */
-    /* top: 80px; */
-    /* transform: translateY(-100px); */
-    /* translate negative value x-axis pe left side shift karega & negative y-axis value top 
-    side shift krega jo ki box se bahr bhi ja skta hai*/
 
-
-    /* position: sticky;
-    top: 2px;  */
     padding-top: 9px
 
 
     /* Note position sticky se containter apni jaGAH pe stick ho jata hai
             position fixed pe container fixed to ho jata hai but apni original place se hat jata hai. */
 }
+
+/* Default Styles */
+.container.top-header .row.fixed-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container.top-header .navbar-brand img {
+    max-width: 100%;
+}
+
+.container.top-header h4 {
+    margin: 0;
+}
+
+
+
+.container.top-header .col-lg-4.text-lg-end {
+    justify-content: flex-end;
+}
+
+/* Media Query for Small Devices */
+@media (max-width: 768px) {
+    .container.top-header .row.fixed-top {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .container.top-header .col-lg-4,
+    .container.top-header .col-sm-3,
+    .container.top-header .col-lg-4.text-lg-end {
+        justify-content: center;
+        margin-bottom: 46px;
+    }
+
+
+   
+}
+
+
+/*  */
+
 .menu-appeareance{
     font-weight: 600px !important;
 }
@@ -27,9 +61,13 @@
 }
 .section-one{
     background: antiquewhite;
-    margin-top: 92px;
+    /* margin-top: 92px;
+     */
 }
 
+.lft-sec{
+    margin-top: 165px;
+}
 
 
 element.style {
@@ -68,18 +106,6 @@ li {
 }
 
 
-
-
-/* .navbar-nav {
-    display: flex;
-    justify-content: center !important;
-}
-
-.ms-auto {
-    margin-inline: auto !important;
-} */
-
-
 .bg-info {
 
     background-color: rgb(241, 228, 184) !important;
@@ -88,10 +114,6 @@ li {
 .p {
     font-size: large !important;
 }
-
-/* .carousel-inner{
-    width: 30%;
-} */
 
 
 .overlay {
@@ -102,28 +124,22 @@ li {
 .content {
     position: absolute;
     top: 18%;
-    /* left: 20%; */
-    /* transform: translate(-50%, -50%); */
     text-align: center;
     font-weight: 500;
     padding: 20px;
 }
 
-
-/* #carouselExampleDark {
-    margin: auto; 
-    /* Center horizontally */
-/* display: flex; */
-/* align-items: center;  */
-/* Center vertically */
-/* height: 100vh;  */
-/* Set height to full viewport height */
-/* } */
-
-/* .carousel-inner { */
-/* text-align: center;  */
-/* Center carousel items */
-/* } */
+/* Media Query for Small Screens */
+@media (max-width: 768px) {
+    .content {
+        position: static; /* Change position to static for small screens */
+        top: auto; /* Remove top positioning */
+        padding: 10px; /* Adjust padding */
+        margin: 0 auto; /* Center the content */
+        width: 100%; /* Make sure it takes full width */
+        text-align: center; /* Ensure text is centered */
+    }
+}
 
 
 
@@ -170,10 +186,11 @@ li {
 
 .footer-heading {
     height: 300%;
-    /* font-size: xx-large; */
+    font-size: 90px;
+    font-weight: 700;
 }
+
 .footer a {
-    /* color: rgba(var(--bs-link-color-rgb),var(--bs-link-opacity,1)); */
     text-decoration: none;
     color: black;
 }
@@ -181,48 +198,48 @@ li {
 .list {
     list-style: none;
 }
-
-/* h6{
-    text-align:center;
-    margin-left: 29px;
-} */
-
-/* .section-fourth{
-    height: 70%;
-} */
-
-
-.footer-heading {
-    font-size: 90px;
-    font-weight: 700;
+.footer h5 {
+    align-items: center;
+    text-align: left; /* Default alignment */
 }
 
-
+/* Media Query for Small Devices */
 @media (max-width: 768px) {
-    .navbar {
-        background-color: #0f0c0c; /* Set background color to white */
+    .footer h5 {
+        text-align: center; /* Center align text */
+        margin: 0 auto; /* Center align block-level elements */
+    }
+}
+
+/* Media Query for Small Devices */
+@media (max-width: 768px) {
+    .footer {
+        height: auto !important; /* Adjust height for better fit */
+        padding: 20px; /* Add padding for spacing */
     }
 
-    .navbar-nav {
-        --bs-nav-link-color: #090909 !important;
-        --bs-nav-link-hover-color: #060505 !important;
+    .footer-heading {
+        font-size: 24px; /* Adjust font size for readability */
+        height: auto; /* Adjust height to fit content */
+        text-align: center; /* Center align text */
+        margin-bottom: 20px; /* Add margin for spacing */
     }
 
-    .navbar-nav .nav-link.active,
-    .navbar-nav .nav-link.show {
-        color: #0d0808;
+    .footer a {
+        font-size: 14px; /* Adjust link font size for readability */
+        text-align: center; /* Center align text */
+        display: block; /* Make links block-level for better spacing */
+        margin-bottom: 10px; /* Add margin for spacing */
     }
     
-    .nav-link {
-        color: #141010 !important;
+
+    .list {
+        padding-left: 0; /* Remove left padding */
+        text-align: center; /* Center align list items */
     }
 
-    .bg-dark {
-        background-color: #fff!important;
-    }
-    .text-white {
-        /* --bs-text-opacity: 1; */
-        color: #141010 !important
+    .list li {
+        margin-bottom: 10px; /* Add margin for spacing between list items */
     }
 }
 
